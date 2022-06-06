@@ -11,6 +11,18 @@
     <h1>
         khalatni vue :(
     </h1>
+
+    <div id="app">
+    <p>
+        {{title}}- {{author}}-{{age}}
+
+        <button @click="age++">Increase Age</button>
+        <button @click="age--"> Decrease Age</button>
+        <div @click="changeTitle('Oathbringer')">change book title</div>
+    </p>
+    </div>
+
+    <p>Not here</p>
     <script src="app.js"></script>
 </body>
 </html>
