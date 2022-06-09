@@ -13,16 +13,20 @@
     </h1>
 
     <div id="app">
-    <p>
-        {{title}}- {{author}}-{{age}}
+    <button @click="toggle">
+        <!-- v-if takes out the element out of the dom completely when condition is not met  -->
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+    </button>
+    <div v-if="showBooks">
+        <p>{{title}}-{{author}}-{{age}} </p>
+    </div>
+    <!-- v-show toggles css display between 'block' and 'none' -->
+    <div v-show="showBooks">Currently showing books</div>
+    <div v-show="!showBooks">Currently hiding books</div>
 
-        <button @click="age++">Increase Age</button>
-        <button @click="age--"> Decrease Age</button>
-        <div @click="changeTitle('Oathbringer')">change book title</div>
-    </p>
     </div>
 
-    <p>Not here</p>
     <script src="app.js"></script>
 </body>
 </html>

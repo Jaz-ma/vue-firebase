@@ -3,12 +3,13 @@ data(){
     return {
         title:'The Final Empire',
         author:'Brandon Sanderson',
-        age:'43'
+        age:'43',
+        showBooks: true,
     }
 },
 methods:{
-    changeTitle(title){
-        this.title = title
+    toggle(){
+        this.showBooks = !this.showBooks
     }
 }
 })
