@@ -35,6 +35,7 @@
                 <p>
                     {{book.title}}- {{book.author}}
                 </p>
+                <img :src="book.img" alt="">
             </li>
         </ul>
     </div>
@@ -45,6 +46,7 @@
     <div v-show="!showBooks">Currently hiding books</div>
     <br>
 
+    <a :href="url">google</a>
     <script src="app.js"></script>
 </body>
 </html>
