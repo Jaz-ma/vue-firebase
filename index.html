@@ -47,7 +47,7 @@
     </button>
     <div v-if="showBooks">
         <ul>
-            <li v-for="book in books" :class="{ fav: book.isFav}" @dblclick="toggleFav(book)">
+            <li v-for="book in filteredBooks" :class="{ fav: book.isFav}" @dblclick="toggleFav(book)">
                 <p>
                     {{book.title}}- {{book.author}}
                 </p>
